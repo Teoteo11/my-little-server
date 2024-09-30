@@ -13,12 +13,12 @@ app.get('/generate-users', (req: Request, res: Response) => {
   try {
     const users = generateUsers(100);
     res.status(200).json({
-      message: 'Utenti generati con successo!',
+      message: 'Users generated!',
       users
     });
   } catch (error: any) {
     res.status(500).json({
-      message: 'Errore durante la generazione degli utenti',
+      message: 'Error during generating users',
       error: error.message
     });
   }
