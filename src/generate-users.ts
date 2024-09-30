@@ -15,7 +15,6 @@ const generateRandomRegistrationDate = () => {
   return Math.floor(Math.random() * (end - start + 1)) + start;
 };
 
-// Deduci il genere dal nome
 const deduceGender = (firstName: string) => {
   const maleNames = ['Marco', 'Luca', 'Alessandro', 'Giuseppe', 'Giorgio'];
   const femaleNames = ['Giulia', 'Francesca', 'Maria', 'Chiara', 'Silvia'];
@@ -25,7 +24,7 @@ const deduceGender = (firstName: string) => {
   return 'other';
 };
 
-// Funzione per generare un singolo utente
+
 const generateUser = (): User => {
   const firstName = italianFirstNames[Math.floor(Math.random() * italianFirstNames.length)];
   const lastName = italianLastNames[Math.floor(Math.random() * italianLastNames.length)];
@@ -42,7 +41,6 @@ const generateUser = (): User => {
   };
 };
 
-// Funzione per generare utenti e salvare nel file JSON
 export const generateUsers = (numUsers: number) => {
   const users: User[] = [];
 
